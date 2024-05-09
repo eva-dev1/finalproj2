@@ -8,9 +8,9 @@
 </div>
 
 <div id="couplephotos">
-<img id="couplepic1" src="https://i.pinimg.com/564x/d6/ad/50/d6ad501520ccc52493b448ed86e71f01.jpg" alt="couple photo 1" onclick="switchpic()">
-<img id="couplepic2" src="https://i.pinimg.com/564x/76/9a/8f/769a8faeca942df42989f51219e6f0be.jpg" alt="description of image">
-<img id="couplepic3" src="https://i.pinimg.com/564x/07/5c/c0/075cc050d911ebc6ff4880b075bcc44c.jpg" alt="couple photo 3">
+<img id="couplepic1" src="noeye.png" alt="couple photo 1" onclick="switchpic1()">
+<img id="couplepic2" src="noeye.png" alt="description of image">
+<img id="couplepic3" src="noeye.png" alt="couple photo 3">
 </div>
 
 <h3 id="invite">
@@ -104,23 +104,36 @@
   }
   #couplepic1 {
     height: 400px;
+    cursor: pointer;
   }
   #couplepic2 {
     height: 400px;
+    cursor: pointer;
   }
   #couplepic3 {
-    height: 400px
+    height: 400px;
+    cursor: pointer;
   }
   
 </style>
 
 <script>
-    function switchpic() {
+    function switchpic1() {
         let image = document.getElementById("couplepic1");
-        if (image.src.match("https://i.pinimg.com/564x/d6/ad/50/d6ad501520ccc52493b448ed86e71f01.jpg")) {
-            image.src = "https://i.pinimg.com/564x/d6/ad/50/d6ad501520ccc52493b448ed86e71f01.jpg"; // Change to the second image
-        } else {
-            image.src = "first_image.jpg"; // Change back to the first image
+        if (image.src.match("noeye.png")) {
+            image.src = "https://i.pinimg.com/564x/d6/ad/50/d6ad501520ccc52493b448ed86e71f01.jpg"; 
+        }
+    }
+  function switchpic2() {
+        let image = document.getElementById("couplepic2");
+        if (image.src.match("noeye.png")) {
+            image.src = "https://i.pinimg.com/564x/76/9a/8f/769a8faeca942df42989f51219e6f0be.jpg"; 
+        }
+    }
+    function switchpic3() {
+        let image = document.getElementById("couplepic3");
+        if (image.src.match("noeye.png")) {
+            image.src = "https://i.pinimg.com/564x/07/5c/c0/075cc050d911ebc6ff4880b075bcc44c.jpg"; 
         }
     }
 </script>
