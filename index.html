@@ -8,7 +8,7 @@
 </div>
 
 <div id="couplephotos">
-<img id="couplepic1" src="https://i.pinimg.com/564x/d6/ad/50/d6ad501520ccc52493b448ed86e71f01.jpg" alt="couple photo 1">
+<img id="couplepic1" src="https://i.pinimg.com/564x/d6/ad/50/d6ad501520ccc52493b448ed86e71f01.jpg" alt="couple photo 1" onclick="switchpic()">
 <img id="couplepic2" src="https://i.pinimg.com/564x/76/9a/8f/769a8faeca942df42989f51219e6f0be.jpg" alt="description of image">
 <img id="couplepic3" src="https://i.pinimg.com/564x/07/5c/c0/075cc050d911ebc6ff4880b075bcc44c.jpg" alt="couple photo 3">
 </div>
@@ -112,5 +112,15 @@
     height: 400px
   }
   
-  
 </style>
+
+<script>
+    function switchpic() {
+        let image = document.getElementById("couplepic1");
+        if (image.src.match("https://i.pinimg.com/564x/d6/ad/50/d6ad501520ccc52493b448ed86e71f01.jpg")) {
+            image.src = "https://i.pinimg.com/564x/d6/ad/50/d6ad501520ccc52493b448ed86e71f01.jpg"; // Change to the second image
+        } else {
+            image.src = "first_image.jpg"; // Change back to the first image
+        }
+    }
+</script>
